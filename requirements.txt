@@ -1,0 +1,11 @@
+python-dotenv
+requests
+langchain
+langchain-ollama
+langchain-tavily
+langchain-groq
+langchain-openai
+langchain-google-genai
+llama-index
+pypdf
+python-telegram-bot

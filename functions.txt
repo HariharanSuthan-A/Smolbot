@@ -1,0 +1,25 @@
+Available Capabilities : 
+
+search: <query>          → Tavily web search
+from my document <q>     → RAG
+List files in <folder>   → browse files
+Send file <file>         → download file
+normal text              → LLM chat
+Calender                 -> Manage events
+    Add event to Calender <Add event>
+    Show event from Calender <Show event>
+    Delete event from Calender <Delete event>
+
+    
+Telegram supports sending almost anything:
+
+pdf
+txt
+images
+zip
+code
+csv
+json
+
+Max bot upload size (typical):
+50 MB
