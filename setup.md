@@ -8,6 +8,7 @@ Follow these steps to get SmolBot running on any Windows/Mac/Linux machine.
 - **LLM API Key**: Groq (recommended), OpenAI, Google, or OpenRouter.
 - **Telegram Bot Token**: Get one from [@BotFather](https://t.me/BotFather).
 - **Ollama**: Required for document RAG (indexing PDF files).
+- **Google API Credentials**: For Gmail and Google Calendar integration (optional).
 
 ---
 
@@ -49,6 +50,29 @@ GROQ_API_KEY=your_groq_key_here
 OPENAI_API=...
 Model=llama3-70b-8192
 ```
+
+### 6. Setup Google API (Optional - for Gmail and Calendar)
+To use Gmail and Google Calendar features:
+
+1. **Go to Google Cloud Console**: https://console.cloud.google.com/
+2. **Create a new project** or select an existing one
+3. **Enable the APIs**:
+   - Go to "APIs & Services" > "Library"
+   - Search and enable:
+     - Gmail API
+     - Google Calendar API
+4. **Create OAuth2 credentials**:
+   - Go to "APIs & Services" > "Credentials"
+   - Click "Create Credentials" > "OAuth client ID"
+   - Select "Desktop app" as application type
+   - Download the JSON file and rename it to `credentials.json`
+   - Place it in your smolbot root folder
+5. **First run authentication**:
+   - On first run, the bot will open a browser for Google authentication
+   - Login with your Google account and grant permissions
+   - A `token.json` file will be created for future authentication
+
+**Note**: The first time you use Gmail/Calendar features, you'll need to authenticate via browser.
 
 ---
 

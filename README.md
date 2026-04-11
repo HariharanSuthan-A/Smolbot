@@ -29,9 +29,30 @@ SmolBot can keep track of your events — a simple, no-fuss personal calendar.
 
 | Action | Command |
 |---|---|
-| Add an event | `Add event Team standup | 25-03-2026 09:00` |
-| Show all events | `Show events` |
-| Delete an event | `Delete event 1` (by event number) |
+| Add an event (Legacy) | `Add event Team standup | 25-03-2026 09:00` |
+| Show all events (Legacy) | `Show events` |
+| Delete an event (Legacy) | `Delete event 1` (by event number) |
+
+### 📧 Gmail — Read and Send Emails
+With Google OAuth integration, SmolBot can access your Gmail to check, read, and send emails.
+
+| Action | Command |
+|---|---|
+| Check recent emails | `Check email 5` or `Get emails 10` |
+| Read specific email | `Read email <email_id>` |
+| Send email | `Send email to@example.com | Subject | Body text` |
+| Search emails | `Search email is:unread from:boss@company.com` |
+
+### 📅 Google Calendar — Schedule Events
+Create, view, and manage events in your Google Calendar.
+
+| Action | Command |
+|---|---|
+| List upcoming events | `Show calendar 7` or `List calendar` |
+| Create event | `Create event Meeting | 2024-01-15T10:00:00 | 2024-01-15T11:00:00 | Description | Location` |
+| Quick add event | `Quick add event Meeting with John tomorrow at 3pm` |
+| Update event | `Update event <event_id> | New Title | 2024-01-15T14:00:00` |
+| Delete event | `Delete gcal event <event_id>` |
 
 ### 📂 File System
 SmolBot can browse directories and send files to you over Telegram.
@@ -51,9 +72,18 @@ SmolBot can browse directories and send files to you over Telegram.
 | Document Q&A | `from my document <question>` |
 | Browse files | `List files in <folder>` |
 | Download file | `Send file <file>` |
-| Add event | `Add event <title> \| <DD-MM-YYYY HH:MM>` |
-| Show events | `Show events` |
-| Delete event | `Delete event <number>` |
+| Add event (Legacy) | `Add event <title> \| <DD-MM-YYYY HH:MM>` |
+| Show events (Legacy) | `Show events` |
+| Delete event (Legacy) | `Delete event <number>` |
+| **Check Gmail** | `Check email [count]` or `Get emails [count]` |
+| **Read Email** | `Read email <email_id>` |
+| **Send Email** | `Send email <to> \| <subject> \| <body>` |
+| **Search Email** | `Search email <query>` |
+| **Create Calendar Event** | `Create event <title> \| <start> \| <end> \| [desc] \| [location]` |
+| **Show Calendar** | `Show calendar [days]` or `List calendar [days]` |
+| **Quick Add Event** | `Quick add event <natural language>` |
+| **Update Event** | `Update event <event_id> \| [title] \| [start] \| [end]` |
+| **Delete Calendar Event** | `Delete gcal event <event_id>` |
 | Chat | Just type normally |
 
 ---

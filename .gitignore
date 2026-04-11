@@ -28,6 +28,8 @@ smolbot/
 
 # Sensitive Information
 .env
+credentials.json
+token.json
 
 bsoup.py
 # Local Data / Storage

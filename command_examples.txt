@@ -1,0 +1,122 @@
+# SmolBot Command Examples
+# Gmail and Google Calendar Commands
+
+================================
+# GMAIL COMMANDS
+================================
+
+# Check recent emails
+/gmail_check
+/gmail_check 10
+/gmail_check 3
+
+# Read specific email (get email_id from /gmail_check)
+/gmail_read 18e4f3b2a1d9c5e7
+/gmail_read 19c2d5e8f1a4b3c6
+
+# Send email
+/gmail_send john@example.com | Meeting Tomorrow | Hi John, just confirming our meeting tomorrow at 10am.
+
+/gmail_send team@company.com | Project Update | Weekly status:
+1. Completed API integration
+2. Fixed 3 critical bugs
+3. Started documentation
+Let me know if you have questions.
+
+/gmail_send alice@work.com,bob@work.com | Lunch Plans | Let's grab lunch at 12:30pm today. Pizza place?
+
+/gmail_send support@service.com | Bug Report | I'm experiencing login issues with my account. Error: "Invalid credentials"
+
+/gmail_send client@example.com | Re: Invoice #1234 | Thank you for your payment. Invoice #1234 has been marked as paid.
+
+# Search emails
+/gmail_search is:unread
+/gmail_search from:boss@company.com
+/gmail_search subject:meeting
+/gmail_search is:important
+/gmail_search from:newsletter@company.com subject:unsubscribe
+/gmail_search has:attachment
+/gmail_search is:starred
+
+================================
+# GOOGLE CALENDAR COMMANDS
+================================
+
+# List upcoming events
+/gcal_list
+/gcal_list 7
+/gcal_list 14
+/gcal_list 30
+
+# Create calendar event (ISO datetime format)
+/gcal_create Team Meeting | 2024-01-15T10:00:00 | 2024-01-15T11:00:00 | Weekly sync with team | Conference Room A
+
+/gcal_create Doctor Appointment | 2024-01-20T14:30:00 | 2024-01-20T15:30:00 | Annual checkup | Medical Center
+
+/gcal_create Project Deadline | 2024-02-01T17:00:00 | 2024-02-01T18:00:00 | Submit final project deliverables
+
+/gcal_create Lunch with Sarah | 2024-01-18T12:00:00 | 2024-01-18T13:00:00 | Catch up lunch | Cafe Milano
+
+# Quick add event (natural language)
+/gcal_quickadd Meeting with John tomorrow at 3pm
+/gcal_quickadd Lunch next Friday at noon
+/gcal_quickadd Dentist appointment next Tuesday at 10am
+/gcal_quickadd Team standup every Monday at 9am
+/gcal_quickadd Call with client tomorrow afternoon
+/gcal_quickadd Birthday party Saturday at 7pm
+/gcal_quickadd Gym workout tomorrow morning
+/gcal_quickadd Coffee meeting with boss Thursday 2pm
+
+# Delete calendar event (get event_id from /gcal_list)
+/gcal_delete 7h3k2j1n9m5p4q6
+/gcal_delete 9a2b3c4d5e6f7g8
+/gcal_delete 1x2y3z4w5v6u7i8
+
+================================
+# ADVANCED EXAMPLES
+================================
+
+# Workflow: Check emails, read important ones, send reply
+/gmail_check 5
+/gmail_read 18e4f3b2a1d9c5e7
+/gmail_send boss@company.com | Re: Project Update | Thanks for the update. I'll review the documents and send my feedback by EOD.
+
+# Workflow: Schedule meeting after email discussion
+/gmail_search from:client@company.com
+/gcal_create Client Call | 2024-01-16T15:00:00 | 2024-01-16T16:00:00 | Discuss project requirements | Zoom meeting
+
+# Workflow: Quick add multiple events
+/gcal_quickadd Team meeting tomorrow 10am
+/gcal_quickadd Lunch with Sarah Friday 1pm
+/gcal_quickadd Gym session Saturday 8am
+
+# Workflow: Email search to calendar scheduling
+/gmail_search subject:schedule meeting
+/gcal_quickadd Follow up call tomorrow 2pm
+
+================================
+# TIPS
+================================
+
+# Email ID format: Use IDs from /gmail_check output (looks like: 18e4f3b2a1d9c5e7)
+# Event ID format: Use IDs from /gcal_list output (looks like: 7h3k2j1n9m5p4q6)
+
+# DateTime format for /gcal_create:
+# Format: YYYY-MM-DDTHH:MM:SS
+# Examples:
+# 2024-01-15T10:00:00  (Jan 15, 2024 at 10:00 AM)
+# 2024-12-25T14:30:00  (Dec 25, 2024 at 2:30 PM)
+# 2024-06-01T09:15:00  (June 1, 2024 at 9:15 AM)
+
+# Gmail search operators:
+# is:unread, is:read, is:starred, is:important
+# from:email@domain.com, to:email@domain.com
+# subject:keywords, has:attachment
+# is:chat, is:draft, is:sent
+
+# Natural language for /gcal_quickadd:
+# "Meeting tomorrow at 3pm"
+# "Lunch next Friday at noon"
+# "Call with client tomorrow afternoon"
+# "Gym workout tomorrow morning"
+# "Birthday party Saturday at 7pm"

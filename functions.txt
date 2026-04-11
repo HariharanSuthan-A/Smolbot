@@ -1,25 +1,33 @@
-Available Capabilities : 
+Available Capabilities:
 
-search: <query>          → Tavily web search
-from my document <q>     → RAG
-List files in <folder>   → browse files
-Send file <file>         → download file
-normal text              → LLM chat
-Calender                 -> Manage events
-    Add event to Calender <Add event>
-    Show event from Calender <Show event>
-    Delete event from Calender <Delete event>
+search: <query>              → Tavily web search
+from my document <q>         → RAG (PDF Q&A)
+List files in <folder>       → browse files
+Send file <file>             → download file
+normal text                  → LLM chat
 
-    
-Telegram supports sending almost anything:
+--- Legacy Calendar (JSON file) ---
+Add event <title> | <DD-MM-YYYY HH:MM>
+Show events
+Delete event <number>
 
-pdf
-txt
-images
-zip
-code
-csv
-json
+--- Gmail (Google API OAuth) ---
+Check email [count]          → Get recent emails
+Get emails [count]           → Get recent emails
+Read email <email_id>        → Read specific email
+Send email <to> | <subject> | <body>
+Search email <query>         → Gmail search (is:unread, from:email, etc.)
 
-Max bot upload size (typical):
-50 MB
+--- Google Calendar (Google API OAuth) ---
+Show calendar [days]         → List upcoming events
+List calendar [days]         → List upcoming events
+Create event <title> | <start> | <end> | [desc] | [loc]
+                             → Create calendar event (ISO datetime format)
+Quick add event <text>       → Natural language event creation
+Update event <id> | [title] | [start] | [end]
+                             → Update existing event
+Delete gcal event <id>       → Delete calendar event
+
+--- Telegram File Support ---
+PDF, TXT, Images, ZIP, Code files, CSV, JSON
+Max upload size: 50 MB
