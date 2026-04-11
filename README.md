@@ -1,5 +1,8 @@
 # 🤖 SmolBot
 
+![Smolbot](./images/banner.png)
+
+
 **Your compact, multi-talented AI assistant — right inside Telegram.**
 
 SmolBot is a personal AI assistant that lives in your Telegram chats. It's designed to be small in name but big in what it can do. Think of it as that one friend who's always ready to help — whether you need a quick answer, want to look something up on the web, or need to dig through a PDF without opening it yourself.
